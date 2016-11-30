@@ -20,7 +20,7 @@ END
 """
 
 #type the movie_name and city
-movie_name = "dangal"
+movie_name = "kahaani 2"
 city = "bangalore"
 
 #CAUTION, FROM HERE ONWARDS, ONLY DEVELOPERS MAY PROCEED. USERS, PLEASE KEEP YOUR HANDS AWAY
@@ -30,7 +30,9 @@ from datetime import datetime
 #if stupid gives an upper case, to handle it!!
 city = city.lower()
 #what to search for
-search_string = "title=\"%s"%(movie_name)
+search_string1 = "category\\/now showing\"},\"products\":[{\"name\":\"%s"%(movie_name)
+search_string2 = "title=\"%s"%(movie_name)
+
 #the website where movie is displayed
 website = "https://in.bookmyshow.com/%s/movies/nowshowing"%(city)
 loop = True
@@ -39,24 +41,15 @@ while loop:
 	#Fetch the url
 	respons = urllib2.urlopen(website)
 	html_script = respons.read()
-	if search_string.lower() in html_script.lower():
+	if search_string1.lower() in html_script.lower():
 		#Search the webpage
 		for text in html_script.split("\n"):
-			if search_string.lower() in text.lower():
+			if search_string2.lower() in text.lower():
 				loop = False
 				break
 
 moviecode = text.split("href=")[1].split(">")[0].split("\"")[1]		#Fetch the booking link
 booking_link = "https://in.bookmyshow.com%s"%(moviecode)
-
-loop2 = True
-while loop2:
-	respons2 = urllib2.urlopen(booking_link)
-	html_script2 = respons2.read()
-	if "The movie is yet to hit the cinemas" not in html_script2:
-		loop2 = False
-		break
-	print datetime.now(), " Movie Found, Bookings Not Open!", booking_link
 
 print "Book Tickets Now!\nBook Here @ ", booking_link
 webbrowser.open(booking_link)
