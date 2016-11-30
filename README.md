@@ -17,3 +17,10 @@ VERSION			: BETA
 CREATED BY 		: HIMANSHU JANAWADKAR
 
 DATE 			: NOV 30, 2016
+
+
+How to Use?
+
+Just set movie_name to the movie you want to but tickets for, and the city of your movie theatre. 
+
+Save and Run.
