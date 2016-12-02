@@ -1,11 +1,11 @@
 """
 PROJECT 		: LAZY DREAM (a.k.a. MOVIE MASTI)
-VERSION			: BETA
+VERSION			: 1.1
 CREATED BY 		: HIMANSHU JANAWADKAR
 DATE 			: NOV 30, 2016
 PURPOSE			: 1. PROMOTE LAZYNESS FOR PEOPLE WHO WANT TO SEARCH MOVIES ON bookmyshow.com
-				  2. CONTINUESLY CHECKS FOR THE MOVIES, ONCE THE BOOKING STARTS, IT REDIRECTS YOU TO WEBSITE
-				  3. BENEFITIAL FOR HOTSELLER MOVIES
+			  2. CONTINUESLY CHECKS FOR THE MOVIES, ONCE THE BOOKING STARTS, IT REDIRECTS YOU TO WEBSITE
+			  3. BENEFITIAL FOR HOTSELLER MOVIES
 
 			             <!- Note For Developers -->
              If you are trying to optimise the code and realized that
@@ -14,7 +14,9 @@ then increment the following counter by the number of hours you wasted on this c
 
 COUNTER 		: 12
 LAST CHANGES 	: (All the developmental changes down here)
-
+> optimised search pattern
+> Enabled search loop to finish within 8-10 seconds
+> Reduced redundant search
 
 END
 """
